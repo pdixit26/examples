@@ -1,6 +1,4 @@
 export HZN_ORG_ID=pdixit@ibm.com
-export EXCHANGE_USER=iamapikey
-export EXCHANGE_PW=7xpyfwCQjMf1d-_0GzTNC43YuSjTkseUTyf5E2ShGP7y
 export MYDOMAIN=pdixitdomain.com
 export PATTERN=IBM/offlinevoiceassistent   # this is the device type
 export ARCH=arm  
