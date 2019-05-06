@@ -1,0 +1,25 @@
+  {
+	"org": "$HZN_ORG_ID",
+	"label": "$SERVICE_NAME",
+	"description": "Vocie to Audio service",
+	"public": true,
+	"documentation": "",
+	"url": "$MYDOMAIN.$SERVICE_NAME",
+	"version": "$SERVICE_VERSION",
+	"arch": "$ARCH",
+	"sharable": "singleton",
+	"requiredServices": [],
+	"userInput": [],
+	"deployment": {
+		"services": {
+			"$SERVICE_NAME": {
+						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME:$SERVICE_VERSION",
+						"privileged": true,
+						"devices": [
+							     "/dev/i2c-1:/dev/i2c-1"
+							   ]
+					 }
+		  	    }
+		      }
+  }
+

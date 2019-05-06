@@ -1,0 +1,7 @@
+FROM alpine:latest
+
+WORKDIR /
+
+COPY src/offlineva.sh .
+
+CMD /offlineva.sh
