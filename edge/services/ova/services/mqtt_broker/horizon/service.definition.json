@@ -1,0 +1,24 @@
+  {
+	"org": "$HZN_ORG_ID",
+	"label": "$SERVICE_NAME_MQTT",
+	"description": "Service to revice and send data to MQTT",
+	"public": true,
+	"documentation": "",
+	"url": "$MYDOMAIN.$SERVICE_NAME_MQTT",
+	"version": "$SERVICE_VERSION_MQTT",
+	"arch": "$ARCH",
+	"sharable": "singleton",
+	"requiredServices": [],
+	"userInput": [],
+	"deployment": {
+		"services": {
+			"$SERVICE_NAME_MQTT": {
+						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_MQTT:$SERVICE_VERSION_MQTT",
+						"privileged": true,
+						"devices": [
+							   ]
+					 }
+		  	    }
+		      }
+  }
+

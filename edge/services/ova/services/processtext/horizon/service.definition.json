@@ -1,25 +1,32 @@
-  {
-	"org": "$HZN_ORG_ID",
-	"label": "$SERVICE_NAME",
-	"description": "Service to process text commands",
-	"public": true,
-	"documentation": "",
-	"url": "$MYDOMAIN.$SERVICE_NAME",
-	"version": "$SERVICE_VERSION",
-	"arch": "$ARCH",
-	"sharable": "singleton",
-	"requiredServices": [],
-	"userInput": [],
-	"deployment": {
-		"services": {
-			"$SERVICE_NAME": {
-						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME:$SERVICE_VERSION",
-						"privileged": true,
-						"devices": [
-							     "/dev/i2c-1:/dev/i2c-1"
-							   ]
-					 }
-		  	    }
-		      }
-  }
-
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME_PT",
+    "description": "Process text commands",
+    "public": true,
+    "documentation": "",
+    "url": "$MYDOMAIN.$SERVICE_NAME_PT",
+    "version": "$SERVICE_VERSION_PT",
+    "arch": "$ARCH",
+    "sharable": "singleton",
+    "matchHardware": null,
+    "requiredServices": [
+        {
+            "url": "pdixitdomain.com.mqtt_broker",
+            "org": "pdixit@ibm.com",
+            "version": "0.0.1",
+            "arch": "arm"
+        }
+    ],
+    "userInput": [],
+    "deployment": {
+        "services": {
+            "$SERVICE_NAME_PT": {
+                "devices": [],
+                "image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_PT:$SERVICE_VERSION_PT",
+                "privileged": true
+            }
+        }
+    },
+    "deploymentSignature": "",
+    "imageStore": null
+}

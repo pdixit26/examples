@@ -1,24 +1,32 @@
-  {
-	"org": "$HZN_ORG_ID",
-	"label": "$SERVICE_NAME",
-	"description": "Audio to Text service",
-	"public": true,
-	"documentation": "",
-	"url": "$MYDOMAIN.$SERVICE_NAME",
-	"version": "$SERVICE_VERSION",
-	"arch": "$ARCH",
-	"sharable": "singleton",
-	"requiredServices": [],
-	"userInput": [],
-	"deployment": {
-		"services": {
-			"$SERVICE_NAME": {
-						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME:$SERVICE_VERSION",
-						"privileged": true,
-						"devices": [
-							   ]
-					 }
-		  	    }
-		      }
-  }
-
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME_A2T",
+    "description": "Audio to Text service",
+    "public": true,
+    "documentation": "",
+    "url": "$MYDOMAIN.$SERVICE_NAME_A2T",
+    "version": "$SERVICE_VERSION_A2T",
+    "arch": "$ARCH",
+    "sharable": "singleton",
+    "matchHardware": null,
+    "requiredServices": [
+        {
+            "url": "pdixitdomain.com.mqtt_broker",
+            "org": "pdixit@ibm.com",
+            "version": "0.0.1",
+            "arch": "arm"
+        }
+    ],
+    "userInput": [],
+    "deployment": {
+        "services": {
+            "$SERVICE_NAME_A2T": {
+                "devices": [],
+                "image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_A2T:$SERVICE_VERSION_A2T",
+                "privileged": true
+            }
+        }
+    },
+    "deploymentSignature": "",
+    "imageStore": null
+}

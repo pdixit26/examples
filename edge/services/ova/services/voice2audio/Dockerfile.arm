@@ -2,7 +2,7 @@ FROM ubuntu:bionic
 
 RUN apt-get update
 RUN apt-get install -y alsa
-RUN apt-get install -y alsa-utils
+RUN apt-get install -y alsa-utils mosquitto-clients
 
 WORKDIR /
 COPY voice2audio.sh /

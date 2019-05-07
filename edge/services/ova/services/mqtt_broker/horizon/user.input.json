@@ -2,7 +2,7 @@
 	"services": [
 	{
 		"org": "$HZN_ORG_ID",
-		"url": "$MYDOMAIN.$SERVICE_NAME_PT",
+		"url": "$MYDOMAIN.$SERVICE_NAME_MQTT",
 		"versionRange": "[0.0.0,INFINITY)",
 		"variables": {}
 	}

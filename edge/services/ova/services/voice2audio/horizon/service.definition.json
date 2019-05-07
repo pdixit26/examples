@@ -1,25 +1,32 @@
-  {
-	"org": "$HZN_ORG_ID",
-	"label": "$SERVICE_NAME",
-	"description": "Vocie to Audio service",
-	"public": true,
-	"documentation": "",
-	"url": "$MYDOMAIN.$SERVICE_NAME",
-	"version": "$SERVICE_VERSION",
-	"arch": "$ARCH",
-	"sharable": "singleton",
-	"requiredServices": [],
-	"userInput": [],
-	"deployment": {
-		"services": {
-			"$SERVICE_NAME": {
-						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME:$SERVICE_VERSION",
-						"privileged": true,
-						"devices": [
-							     "/dev/i2c-1:/dev/i2c-1"
-							   ]
-					 }
-		  	    }
-		      }
-  }
-
+{
+    "org": "$HZN_ORG_ID",
+    "label": "$SERVICE_NAME_V2A",
+    "description": "Vocie to Audio service",
+    "public": true,
+    "documentation": "",
+    "url": "$MYDOMAIN.$SERVICE_NAME_V2A",
+    "version": "$SERVICE_VERSION_V2A",
+    "arch": "$ARCH",
+    "sharable": "singleton",
+    "matchHardware": null,
+    "requiredServices": [
+        {
+            "url": "pdixitdomain.com.mqtt_broker",
+            "org": "pdixit@ibm.com",
+            "version": "0.0.1",
+            "arch": "arm"
+        }
+    ],
+    "userInput": [],
+    "deployment": {
+        "services": {
+            "$SERVICE_NAME_V2A": {
+                "devices": [],
+                "image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_V2A:$SERVICE_VERSION_V2A",
+                "privileged": true
+            }
+        }
+    },
+    "deploymentSignature": "",
+    "imageStore": null
+}

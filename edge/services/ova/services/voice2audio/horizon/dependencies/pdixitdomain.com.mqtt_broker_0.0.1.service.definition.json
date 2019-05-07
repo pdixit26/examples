@@ -1,0 +1,25 @@
+{
+    "org": "pdixit@ibm.com",
+    "label": "mqtt_broker",
+    "description": "Service to revice and send data to MQTT",
+    "public": true,
+    "documentation": "",
+    "url": "pdixitdomain.com.mqtt_broker",
+    "version": "0.0.1",
+    "arch": "arm",
+    "sharable": "singleton",
+    "matchHardware": null,
+    "requiredServices": [],
+    "userInput": [],
+    "deployment": {
+        "services": {
+            "mqtt_broker": {
+                "devices": [],
+                "image": "pdixit26/arm_mqtt_broker:0.0.1",
+                "privileged": true
+            }
+        }
+    },
+    "deploymentSignature": "",
+    "imageStore": null
+}

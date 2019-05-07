@@ -1,22 +1,21 @@
   {
 	"org": "$HZN_ORG_ID",
-	"label": "$SERVICE_NAME",
-	"description": "Vocie to Audio service",
+	"label": "$SERVICE_NAME_T2S",
+	"description": "Speech to text service using offline Espeak Tool",
 	"public": true,
 	"documentation": "",
-	"url": "$MYDOMAIN.$SERVICE_NAME",
-	"version": "$SERVICE_VERSION",
+	"url": "$MYDOMAIN.$SERVICE_NAME_T2S",
+	"version": "$SERVICE_VERSION_T2S",
 	"arch": "$ARCH",
 	"sharable": "singleton",
 	"requiredServices": [],
 	"userInput": [],
 	"deployment": {
 		"services": {
-			"$SERVICE_NAME": {
-						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME:$SERVICE_VERSION",
+			"$SERVICE_NAME_T2S": {
+						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_T2S:$SERVICE_VERSION_T2S",
 						"privileged": true,
 						"devices": [
-							     "/dev/i2c-1:/dev/i2c-1"
 							   ]
 					 }
 		  	    }
