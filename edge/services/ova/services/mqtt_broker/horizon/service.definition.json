@@ -14,8 +14,12 @@
 		"services": {
 			"$SERVICE_NAME_MQTT": {
 						"image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_MQTT:$SERVICE_VERSION_MQTT",
-						"privileged": true,
-						"devices": [
+						"privileged": false,
+						"ports": [
+							{
+								"HostPort" : "1883:1883/tcp",
+								"HostIP":"0,0,0,0"
+							}
 							   ]
 					 }
 		  	    }
