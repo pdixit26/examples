@@ -14,9 +14,14 @@
     "deployment": {
         "services": {
             "mqtt_broker": {
-                "devices": [],
                 "image": "pdixit26/arm_mqtt_broker:0.0.1",
-                "privileged": true
+                "ports": [
+                    {
+                        "HostIP": "0.0.0.0",
+                        "HostPort": "1883:1883/tcp"
+                    }
+                ],
+                "privileged": false
             }
         }
     },

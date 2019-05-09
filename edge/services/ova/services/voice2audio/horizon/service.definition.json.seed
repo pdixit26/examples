@@ -10,30 +10,6 @@
     "sharable": "singleton",
     "matchHardware": null,
     "requiredServices": [
-        {
-            "url": "pdixitdomain.com.mqtt_broker",
-            "org": "pdixit@ibm.com",
-            "version": "0.0.1",
-            "arch": "arm"
-        },
-        {
-            "url": "pdixitdomain.com.audio2text",
-            "org": "pdixit@ibm.com",
-            "version": "0.0.1",
-            "arch": "arm"
-        },
-        {
-            "url": "pdixitdomain.com.processtext",
-            "org": "pdixit@ibm.com",
-            "version": "0.0.1",
-            "arch": "arm"
-        },
-        {
-            "url": "pdixitdomain.com.text2speech",
-            "org": "pdixit@ibm.com",
-            "version": "0.0.1",
-            "arch": "arm"
-        }
     ],
     "userInput": [],
     "deployment": {

@@ -1,12 +1,12 @@
 {
-    "org": "$HZN_ORG_ID",
-    "label": "$SERVICE_NAME_T2S",
-    "description": "Speech to text service using offline Espeak Tool",
+    "org": "pdixit@ibm.com",
+    "label": "processtext",
+    "description": "Process text commands",
     "public": true,
     "documentation": "",
-    "url": "$MYDOMAIN.$SERVICE_NAME_T2S",
-    "version": "$SERVICE_VERSION_T2S",
-    "arch": "$ARCH",
+    "url": "pdixitdomain.com.processtext",
+    "version": "0.0.1",
+    "arch": "arm",
     "sharable": "singleton",
     "matchHardware": null,
     "requiredServices": [
@@ -20,9 +20,9 @@
     "userInput": [],
     "deployment": {
         "services": {
-            "$SERVICE_NAME_T2S": {
+            "processtext": {
                 "devices": [],
-                "image": "$DOCKER_HUB_ID/${ARCH}_$SERVICE_NAME_T2S:$SERVICE_VERSION_T2S",
+                "image": "pdixit26/arm_processtext:0.0.1",
                 "privileged": true
             }
         }

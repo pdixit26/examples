@@ -18,7 +18,7 @@
 						"ports": [
 							{
 								"HostPort" : "1883:1883/tcp",
-								"HostIP":"0,0,0,0"
+								"HostIP":"0.0.0.0"
 							}
 							   ]
 					 }

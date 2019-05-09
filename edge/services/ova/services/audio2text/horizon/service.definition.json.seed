@@ -11,10 +11,6 @@
     "matchHardware": null,
     "requiredServices": [
         {
-            "url": "pdixitdomain.com.mqtt_broker",
-            "org": "pdixit@ibm.com",
-            "version": "0.0.1",
-            "arch": "arm"
         }
     ],
     "userInput": [],
