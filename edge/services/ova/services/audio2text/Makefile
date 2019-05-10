@@ -6,3 +6,9 @@ build:
 
 run:
 	docker run -it  -v /dev/snd:/dev/snd --privileged  $(IMAGE_NAME)
+
+docker-push: build
+	docker push $(DOCKER_HUB_ID)/$(IMAGE_NAME):$(SERVICE_VERSION_PT)
+
+publish-service:
+	hzn exchange service publish -k $(PRIVATE_KEY_FILE) -K $(PUBLIC_KEY_FILE) -f horizon/service.definition.json
