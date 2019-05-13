@@ -1,0 +1,12 @@
+{
+	"services": [
+		      {
+			"org": "$MYDOMAIN",
+			"url": "$SERVICE_NAME_PT",
+			"versionRange": "[0.0.0,INFINITY)",
+			"variables": {
+					"MSGHUB_API_KEY": "$MSGHUB_API_KEY"
+				    }
+		}
+	]
+}
