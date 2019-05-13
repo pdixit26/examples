@@ -11,4 +11,4 @@ echo "Wav file is converted to base64encoded file"
 mosquitto_pub -h mqtt_broker -t ova/audioheard -f encodeddata
 echo "SENT AUDIO DATA TO AUDIO 2 TEXT SERVICE"
 
-sleep 90
+sleep 60

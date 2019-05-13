@@ -1,0 +1,17 @@
+{
+       	"label": "$SERVICE_NAME_PT",
+	"description": "Pattern for process text service",
+	"public": true,
+	"services": [
+			{
+				"serviceUrl": "$MYDOMAIN.$SERVICE_NAME_PT",
+				"serviceOrgid": "$HZN_ORG_ID",
+				"serviceArch": "arm",
+				"serviceVersions": [
+							{
+							 "version": "$SERVICE_VERSION_PT"
+							}
+							]
+			}
+	]
+}
