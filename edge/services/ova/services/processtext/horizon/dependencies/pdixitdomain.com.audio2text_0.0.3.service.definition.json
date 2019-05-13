@@ -5,10 +5,9 @@
     "public": true,
     "documentation": "",
     "url": "pdixitdomain.com.audio2text",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "arch": "arm",
     "sharable": "singleton",
-    "matchHardware": null,
     "requiredServices": [
         {
             "url": "pdixitdomain.com.mqtt_broker",
@@ -22,11 +21,9 @@
         "services": {
             "audio2text": {
                 "devices": [],
-                "image": "pdixit26/arm_audio2text:0.0.1",
+                "image": "pdixit26/arm_audio2text:0.0.3",
                 "privileged": true
             }
         }
-    },
-    "deploymentSignature": "",
-    "imageStore": null
+    }
 }

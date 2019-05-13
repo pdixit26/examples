@@ -8,7 +8,6 @@
     "version": "0.0.1",
     "arch": "arm",
     "sharable": "singleton",
-    "matchHardware": null,
     "requiredServices": [],
     "userInput": [],
     "deployment": {
@@ -24,7 +23,5 @@
                 "privileged": false
             }
         }
-    },
-    "deploymentSignature": "",
-    "imageStore": null
+    }
 }

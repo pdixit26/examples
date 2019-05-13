@@ -8,12 +8,29 @@
     "version": "$SERVICE_VERSION_PT",
     "arch": "$ARCH",
     "sharable": "singleton",
-    "matchHardware": null,
     "requiredServices": [
         {
             "url": "pdixitdomain.com.mqtt_broker",
             "org": "pdixit@ibm.com",
             "version": "0.0.1",
+            "arch": "arm"
+        },
+        {
+            "url": "pdixitdomain.com.voice2audio",
+            "org": "pdixit@ibm.com",
+            "version": "0.0.3",
+            "arch": "arm"
+        },
+        {
+            "url": "pdixitdomain.com.audio2text",
+            "org": "pdixit@ibm.com",
+            "version": "0.0.3",
+            "arch": "arm"
+        },
+        {
+            "url": "pdixitdomain.com.text2speech",
+            "org": "pdixit@ibm.com",
+            "version": "0.0.3",
             "arch": "arm"
         }
     ],
@@ -26,7 +43,5 @@
                 "privileged": true
             }
         }
-    },
-    "deploymentSignature": "",
-    "imageStore": null
+    }
 }

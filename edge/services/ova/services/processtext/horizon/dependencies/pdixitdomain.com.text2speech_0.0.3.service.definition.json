@@ -1,14 +1,13 @@
 {
     "org": "pdixit@ibm.com",
-    "label": "processtext",
-    "description": "Process text commands",
+    "label": "text2speech",
+    "description": "Speech to text service using offline Espeak Tool",
     "public": true,
     "documentation": "",
-    "url": "pdixitdomain.com.processtext",
-    "version": "0.0.1",
+    "url": "pdixitdomain.com.text2speech",
+    "version": "0.0.3",
     "arch": "arm",
     "sharable": "singleton",
-    "matchHardware": null,
     "requiredServices": [
         {
             "url": "pdixitdomain.com.mqtt_broker",
@@ -20,13 +19,11 @@
     "userInput": [],
     "deployment": {
         "services": {
-            "processtext": {
+            "text2speech": {
                 "devices": [],
-                "image": "pdixit26/arm_processtext:0.0.1",
+                "image": "pdixit26/arm_text2speech:0.0.3",
                 "privileged": true
             }
         }
-    },
-    "deploymentSignature": "",
-    "imageStore": null
+    }
 }

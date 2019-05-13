@@ -1,1 +1,16 @@
-{}
+{
+    "services": [
+        {
+            "org": "pdixit@ibm.com",
+            "url": "pdixitdomain.com.audio2text",
+            "versionRange": "[0.0.0,INFINITY)",
+            "variables": {}
+        },
+        {
+            "org": "pdixit@ibm.com",
+            "url": "pdixitdomain.com.voice2audio",
+            "versionRange": "[0.0.0,INFINITY)",
+            "variables": {}
+        }
+    ]
+}
