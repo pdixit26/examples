@@ -1,4 +1,4 @@
-echo "STARING PROCESSTEXT SERVICE"
+echo "[OVA]:STARING PROCESSTEXT SERVICE"
 #subscribe to audio2text publish topic
 mosquitto_sub -h mqtt_broker -t ova/textheard -p 1883 | while read -r line
 do
@@ -9,8 +9,8 @@ do
 	else
 		echo "i dont understand what you said" >msg    
 	fi
-	cat msg
+	echo "[OVA]: $(cat msg)"
 	mosquitto_pub -h mqtt_broker -t ova/result -p 1883 -f msg
-	echo "SENDING MESSAGE TO TEXT TO SPEECH SERVICE"
+	echo "[OVA]:SENDING MESSAGE TO TEXT TO SPEECH SERVICE"
  fi
 done

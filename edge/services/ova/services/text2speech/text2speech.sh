@@ -1,6 +1,4 @@
-echo "*******************************"
-echo "Text to Speech Service is starting"
-echo "********************************"
+echo "[OVA]:Text to Speech Service is starting"
 
 mosquitto_sub -h mqtt_broker -t ova/result -p 1883 | while read -r line
 do 

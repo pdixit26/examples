@@ -1,5 +1,5 @@
 #Audio 2 Text 
-echo "STARTING AUDIO 2 TEXT SERVICE"
+echo "[OVA]:STARTING AUDIO 2 TEXT SERVICE"
 
 
 #get base64 encoded output from listenaudio topic
@@ -11,11 +11,11 @@ if [ ! -z "$line" ]; then
 
 	base64 -d encoded > new.wav 
 	aplay -D plughw:0,0 new.wav
-	echo "Converting Audio 2 Text OFFLINE using Poecket_Sphinx. Wait for few seconds."
+	echo "[OVA]:Converting Audio 2 Text OFFLINE using Poecket_Sphinx. Wait for few seconds."
 	pocketsphinx_continuous -infile new.wav -logfn /dev/null > textcommand
 	sleep 30
-	echo "$(cat textcommand)"
+	echo "[OVA]: $(cat textcommand)"
 	mosquitto_pub -h mqtt_broker -t ova/textheard -p 1883 -f textcommand 
-	echo "SENDING TEXT TO PROCESSTEXT SERVICE"
+	echo "[OVA]:SENDING TEXT TO PROCESSTEXT SERVICE"
 fi
 done
